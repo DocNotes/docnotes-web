@@ -1,8 +1,22 @@
+{% load staticfiles %}
+
 <html>
 <head>Index</head>
 
 <body>
-Dashboard goes here
+Dashboard goes here 
+
+<div class="container">
+   {% for patient in patients %}
+    <div class="col-sm-4">
+		<img src="{{ MEDIA_URL }}{{ patient.photo }}" />
+        <span class="name">
+        Name: {{ patient.name }}
+        </span>
+    </div>
+   {% endfor %}
+</div>
+
 </body>
 
 </html>
