@@ -27,28 +27,128 @@ html(lang='en')
 	body
 		nav
 			a(class='logo' href='#')
-				img(src='images/logo.png', rel='DocNotes logo')
+				img(src='images/logo@2x.png', rel='DocNotes logo', width='60')
 			.menu
-				a.patients(href='#') Patients
-				a.emergencies(href='#') Emergencies
-				a.history(href='#') History
-				a.help(href='#') Help Center
+				a.icon.icon--ambulance.active(href='#') Patients
+				a.icon.icon--emergencies(href='#') Emergencies
+				a.icon.icon--history(href='#') History
+				a.icon.icon--help(href='#') Help Center
 
-		header
-			a(class='btn' href='#') Add patient
-			a(class='icon icon--notification' href='#') Notification
-			a(class='icon icon--calendar' href='#') Calendar
-			a(class='icon icon--off' href='#') Log out
+		section
+			.header
+				.wrap.float--right
+					a(class='btn  btn--add' href='#')
+						span.plus +
+						span Add patient
+					.float--right
+						a(class='icon icon--notification' href='#') Notification
+						a(class='icon icon--calendar' href='#') Calendar
+						a(class='icon icon--off' href='#') Log out
 
-		section.info
-			.client
-				p Hospital
-				img(src='images/hospital.png', rel="Gleneagles hospital")
+			.content--info
+				.client.float--left
+					p Hospital
+					img(src='images/hospital.png', rel='Gleneagles hospital', width='150')
 
-			.ward
-				p Ward
+				.ward.float--right
+					p Ward
+					select(name='select')
+						option(value='value 1') value 1
+						option(value='value 2') value 2
+						option(value='value 3') value 3
 
+			.content--summary
+				.summary
+					.number 47
+					.title Patients in ward
+					.divider
+					.gallery
+						img(src='images/patient_one.png', alt='Patient', width='42')
+						img(src='images/patient_two.png', alt='Patient', width='42')
+						img(src='images/patient_three.png', alt='Patient', width='42')
 
+				.summary
+					.number 4
+					.title Emergencies
+					.divider
+					.gallery
+						img(src='images/patient_one.png', alt='Patient', width='42')
+						img(src='images/patient_two.png', alt='Patient', width='42')
+						img(src='images/patient_three.png', alt='Patient', width='42')
+
+				.summary
+					.number 14
+					.title Discharged
+						span (Last week)
+					.divider
+					.gallery
+						img(src='images/patient_one.png', alt='Patient', width='42')
+						img(src='images/patient_two.png', alt='Patient', width='42')
+						img(src='images/patient_three.png', alt='Patient', width='42')
+
+			.content--filters
+				.search.float--left
+					p Search
+					input(type='search', value='search', name='Search')
+
+				.sort.float--right
+					p Sort by
+					select(name='select')
+						option(value='value 1') value 1
+						option(value='value 2') value 2
+						option(value='value 3') value 3
+
+			.content--tables
+				table(width='100%')
+					tr
+						th No
+						th Patient name
+						th Admission date
+						th Schedule
+						th Emergencies
+						th Status
+					tr
+						td 202
+						td Rossi Mario
+						td Mon 23rd Jan 2016
+						td.onTime On time
+						td Null
+						td.discharged Discharged
+					tr
+						td 202
+						td Rossi Mario
+						td Mon 23rd Jan 2016
+						td.onPending Pending
+						td Null
+						td.onActive Active
+					tr
+						td 202
+						td Rossi Mario
+						td Mon 23rd Jan 2016
+						td.delayed Delayed
+						td Null
+						td.discharged Discharged
+					tr
+						td 202
+						td Rossi Mario
+						td Mon 23rd Jan 2016
+						td.onTime On time
+						td Null
+						td.onActive Active
+					tr
+						td 202
+						td Rossi Mario
+						td Mon 23rd Jan 2016
+						td.delayed Delayed
+						td Null
+						td.onActive Active
+					tr
+						td 202
+						td Rossi Mario
+						td Mon 23rd Jan 2016
+						td.onTime On time
+						td Null
+						td.onActive Active
 
 
 		script(type='text/javascript' src='js/script.min.js')

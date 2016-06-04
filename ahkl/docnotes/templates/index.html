@@ -21,16 +21,121 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <nav><a href="#" class="logo"><img src="images/logo.png" rel="DocNotes logo"></a>
-      <div class="menu"><a href="#" class="patients">Patients</a><a href="#" class="emergencies">Emergencies</a><a href="#" class="history">History</a><a href="#" class="help">Help Center</a></div>
+    <nav><a href="#" class="logo"><img src="images/logo@2x.png" rel="DocNotes logo" width="60"></a>
+      <div class="menu"><a href="#" class="icon icon--ambulance active">Patients</a><a href="#" class="icon icon--emergencies">Emergencies</a><a href="#" class="icon icon--history">History</a><a href="#" class="icon icon--help">Help Center</a></div>
     </nav>
-    <header><a href="#" class="btn">Add patient</a><a href="#" class="icon icon--notification">Notification</a><a href="#" class="icon icon--calendar">Calendar</a><a href="#" class="icon icon--off">Log out</a></header>
-    <section class="info">
-      <div class="client">
-        <p>Hospital</p><img src="images/hospital.png" rel="Gleneagles hospital">
+    <section>
+      <div class="header">
+        <div class="wrap float--right"><a href="#" class="btn  btn--add"><span class="plus">+</span><span>Add patient</span></a>
+          <div class="float--right"><a href="#" class="icon icon--notification">Notification</a><a href="#" class="icon icon--calendar">Calendar</a><a href="#" class="icon icon--off">Log out</a></div>
+        </div>
       </div>
-      <div class="ward">
-        <p>Ward</p>
+      <div class="content--info">
+        <div class="client float--left">
+          <p>Hospital</p><img src="images/hospital.png" rel="Gleneagles hospital" width="150">
+        </div>
+        <div class="ward float--right">
+          <p>Ward</p>
+          <select name="select">
+            <option value="value 1">value 1</option>
+            <option value="value 2">value 2</option>
+            <option value="value 3">value 3</option>
+          </select>
+        </div>
+      </div>
+      <div class="content--summary">
+        <div class="summary">
+          <div class="number">47</div>
+          <div class="title">Patients in ward</div>
+          <div class="divider"></div>
+          <div class="gallery"><img src="images/patient_one.png" alt="Patient" width="42"><img src="images/patient_two.png" alt="Patient" width="42"><img src="images/patient_three.png" alt="Patient" width="42"></div>
+        </div>
+        <div class="summary">
+          <div class="number">4</div>
+          <div class="title">Emergencies</div>
+          <div class="divider"></div>
+          <div class="gallery"><img src="images/patient_one.png" alt="Patient" width="42"><img src="images/patient_two.png" alt="Patient" width="42"><img src="images/patient_three.png" alt="Patient" width="42"></div>
+        </div>
+        <div class="summary">
+          <div class="number">14</div>
+          <div class="title">Discharged<span>(Last week)</span></div>
+          <div class="divider"></div>
+          <div class="gallery"><img src="images/patient_one.png" alt="Patient" width="42"><img src="images/patient_two.png" alt="Patient" width="42"><img src="images/patient_three.png" alt="Patient" width="42"></div>
+        </div>
+      </div>
+      <div class="content--filters">
+        <div class="search float--left">
+          <p>Search</p>
+          <input type="search" value="search" name="Search">
+        </div>
+        <div class="sort float--right">
+          <p>Sort by</p>
+          <select name="select">
+            <option value="value 1">value 1</option>
+            <option value="value 2">value 2</option>
+            <option value="value 3">value 3</option>
+          </select>
+        </div>
+      </div>
+      <div class="content--tables">
+        <table width="100%">
+          <tr>
+            <th>No</th>
+            <th>Patient name</th>
+            <th>Admission date</th>
+            <th>Schedule</th>
+            <th>Emergencies</th>
+            <th>Status</th>
+          </tr>
+          <tr>
+            <td>202</td>
+            <td>Rossi Mario</td>
+            <td>Mon 23rd Jan 2016</td>
+            <td class="onTime">On time</td>
+            <td>Null</td>
+            <td class="discharged">Discharged</td>
+          </tr>
+          <tr>
+            <td>202</td>
+            <td>Rossi Mario</td>
+            <td>Mon 23rd Jan 2016</td>
+            <td class="onPending">Pending</td>
+            <td>Null</td>
+            <td class="onActive">Active</td>
+          </tr>
+          <tr>
+            <td>202</td>
+            <td>Rossi Mario</td>
+            <td>Mon 23rd Jan 2016</td>
+            <td class="delayed">Delayed</td>
+            <td>Null</td>
+            <td class="discharged">Discharged</td>
+          </tr>
+          <tr>
+            <td>202</td>
+            <td>Rossi Mario</td>
+            <td>Mon 23rd Jan 2016</td>
+            <td class="onTime">On time</td>
+            <td>Null</td>
+            <td class="onActive">Active</td>
+          </tr>
+          <tr>
+            <td>202</td>
+            <td>Rossi Mario</td>
+            <td>Mon 23rd Jan 2016</td>
+            <td class="delayed">Delayed</td>
+            <td>Null</td>
+            <td class="onActive">Active</td>
+          </tr>
+          <tr>
+            <td>202</td>
+            <td>Rossi Mario</td>
+            <td>Mon 23rd Jan 2016</td>
+            <td class="onTime">On time</td>
+            <td>Null</td>
+            <td class="onActive">Active</td>
+          </tr>
+        </table>
       </div>
     </section>
     <script type="text/javascript" src="js/script.min.js"></script>
