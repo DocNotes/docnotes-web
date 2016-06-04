@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'docnotes',
     'rest_framework',
+    'watson',
 ]
 
 REST_FRAMEWORK = {

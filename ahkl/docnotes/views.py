@@ -3,7 +3,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from .models import Patients, Prescription
 from rest_framework import viewsets
 from .serializers import PatientsSerializer, PrescriptionSerializer 
-
+from watson import search as watson
 
 # Create your views here.
 def index(request):
@@ -19,3 +19,7 @@ class PatientsViewSet(viewsets.ModelViewSet):
 class PrescriptionViewSet(viewsets.ModelViewSet):
 	queryset = Prescription.objects.all()
 	serializer_class = PrescriptionSerializer
+
+
+
+

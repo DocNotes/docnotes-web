@@ -3,6 +3,8 @@ from __future__ import unicode_literals
 from django.db import models
 from django.views.generic import TemplateView
 from datetime import datetime, date
+from watson import search as watson
+
 
 # Create your models here.
 

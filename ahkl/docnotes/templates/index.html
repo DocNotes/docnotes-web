@@ -10,6 +10,11 @@
 
 <body>
 
+<form action="{% url 'watson:search' %}">
+    <input name="q" value="{{request.GET.q}}">
+    <input type="submit" value="Go">
+</form>
+
 <div class="container">
    {% for patient in patients %}
     <div class="patient-info">
