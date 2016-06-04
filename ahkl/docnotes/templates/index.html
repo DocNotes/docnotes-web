@@ -16,10 +16,11 @@
 		<img src="{{ MEDIA_URL }}{{ patient.photo }}" />
         <span class="name">
         Name: {{ patient.name }}<br>
-        UUID : {{ patient.id }}<br>
+        UUID : {{ patient.device_id }}<br>
         Remarks : {{ patient.remark }}<br>
         Date Admitted : {{ patient.date }}<br>
-        Status : {{ patient.status }}
+        Status : {{ patient.status }}<br>
+        Schedule : {{ patient.schedule }}
         </span>
     </div>
    {% endfor %}
@@ -34,7 +35,6 @@
         Quantity : {{ medication.quantity }}<br>
         Interval : {{ medication.interval }}<br>
         Until : {{ medication.duration }}<br>
-        Schedule : {{ medication.schedule }}
         </span>
     </div>
    {% endfor %}
