@@ -1,0 +1,51 @@
+{% load staticfiles %}
+
+<html>
+<style>
+.patient-info {
+	padding-bottom: 30px;
+}
+</style>
+<title>Index</title>
+
+<body>
+
+<form action="{% url 'watson:search' %}">
+    <input name="q" value="{{request.GET.q}}">
+    <input type="submit" value="Go">
+</form>
+
+<div class="container">
+   {% for patient in patients %}
+    <div class="patient-info">
+		<img src="{{ MEDIA_URL }}{{ patient.photo }}" />
+        <span class="name">
+        Name: {{ patient.name }}<br>
+        UUID : {{ patient.device_id }}<br>
+        Remarks : {{ patient.remark }}<br>
+        Date Admitted : {{ patient.date }}<br>
+        Status : {{ patient.status }}<br>
+        Schedule : {{ patient.schedule }}
+        </span>
+    </div>
+   {% endfor %}
+</div>
+
+<div class="container">
+   {% for medication in medications %}
+    <div class="patient-info">
+    <img src="{{ MEDIA_URL }}{{ patient.photo }}" />
+        <span class="name">
+        Prescription: {{ medication.medication_type }}<br>
+        Quantity : {{ medication.quantity }}<br>
+        Interval (every x hours) : {{ medication.time_interval }}<br>
+        Until : {{ medication.duration }}<br>
+        </span>
+    </div>
+   {% endfor %}
+</div>
+       
+
+</body>
+
+</html>

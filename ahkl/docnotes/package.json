@@ -1,0 +1,35 @@
+{
+  "name": "docnotes",
+  "version": "0.0.1",
+  "description": "Smart dashboard for hospitals",
+  "main": "gruntfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-jade": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-image": "^1.5.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/DocNotes/docnotes-web.git"
+  },
+  "keywords": [
+    "doctors",
+    "patients",
+    "hospitals",
+    "dashboard",
+    "android",
+    "wear"
+  ],
+  "author": "Ghis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DocNotes/docnotes-web/issues"
+  },
+  "homepage": "https://github.com/DocNotes/docnotes-web#readme"
+}
