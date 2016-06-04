@@ -16,9 +16,9 @@ module.exports = function(grunt) {
         base: 'docnotes',
 
         // Destination public directory: Global
-		view: 'docnotes/templates',
-        css: 'docnotes/templates/css',
-        image: 'docnotes/templates/images'
+		view: 'templates',
+        css: 'templates/css',
+        image: 'templates/images'
     },
 
     // Tasks & Configurations

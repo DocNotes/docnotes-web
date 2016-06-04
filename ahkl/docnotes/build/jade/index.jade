@@ -1,5 +1,5 @@
 doctype html
-!= "<html lang='en'>"
+html(lang='en')
 	head
 		title='DocNotes | Smart dashboard for hospitals'
 		meta(charset='utf-8')
@@ -8,24 +8,47 @@ doctype html
 		meta(content='IE=edge', http-equiv='X-UA-Compatible')
 
 		meta(content='DocNotes | Smart dashboard for hospitals', name='title')
-		meta(content="Smart dashboard for hospitals to communicate efficient patient data between doctors and nurses to reduce human errors.", name='description')
+		meta(content='Smart dashboard for hospitals to communicate efficient patient data between doctors and nurses to reduce human errors.', name='description')
 
 		meta(content='DocNotes | Smart dashboard for hospitals', property='og:title')
-		meta(content="Smart dashboard for hospitals to communicate efficient patient data between doctors and nurses to reduce human errors.", property='og:description')
+		meta(content='Smart dashboard for hospitals to communicate efficient patient data between doctors and nurses to reduce human errors.', property='og:description')
 		meta(content='website', property='og:type')
 		meta(content='http://docnotes.com', property='og:url')
 
 		// Twitter
 		meta(content='DocNotes | Smart dashboard for hospitals', name='twitter:site')
 		meta(content='DocNotes | Smart dashboard for hospitals', name='twitter:title')
-		meta(content="Smart dashboard for hospitals to communicate efficient patient data between doctors and nurses to reduce human errors.", name='twitter:description')
+		meta(content='Smart dashboard for hospitals to communicate efficient patient data between doctors and nurses to reduce human errors.', name='twitter:description')
 		meta(content='summary', name='twitter:card')
 
 		link(href='images/logo.png', rel='icon', type='image/png')
 		link(href='css/style.css', rel='stylesheet', type='text/css')
 
 	body
-		h1 This is a headline
+		nav
+			a(class='logo' href='#')
+				img(src='images/logo.png', rel='DocNotes logo')
+			.menu
+				a.patients(href='#') Patients
+				a.emergencies(href='#') Emergencies
+				a.history(href='#') History
+				a.help(href='#') Help Center
+
+		header
+			a(class='btn' href='#') Add patient
+			a(class='icon icon--notification' href='#') Notification
+			a(class='icon icon--calendar' href='#') Calendar
+			a(class='icon icon--off' href='#') Log out
+
+		section.info
+			.client
+				p Hospital
+				img(src='images/hospital.png', rel="Gleneagles hospital")
+
+			.ward
+				p Ward
+
+
+
 
 		script(type='text/javascript' src='js/script.min.js')
-!= "</html>"
