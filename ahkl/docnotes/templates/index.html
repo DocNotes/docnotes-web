@@ -1,21 +1,42 @@
 {% load staticfiles %}
 
 <html>
-<head>Index</head>
+<style>
+.patient-info {
+	padding-bottom: 30px;
+}
+</style>
+<title>Index</title>
 
 <body>
-Dashboard goes here 
 
 <div class="container">
    {% for patient in patients %}
-    <div class="col-sm-4">
+    <div class="patient-info">
 		<img src="{{ MEDIA_URL }}{{ patient.photo }}" />
         <span class="name">
-        Name: {{ patient.name }}
+        Name: {{ patient.name }}<br>
+        UUID : {{ patient.id }}<br>
+        Remarks : {{ patient.remark }}<br>
+        Date Admitted : {{ patient.date }}
         </span>
     </div>
    {% endfor %}
 </div>
+
+<div class="container">
+   {% for medication in medications %}
+    <div class="patient-info">
+    <img src="{{ MEDIA_URL }}{{ patient.photo }}" />
+        <span class="name">
+        Perfscription: {{ medication.medication_type }}<br>
+        Quantity: {{ medication.quantity }}<br>
+        Interval: {{ medication.interval }}
+        </span>
+    </div>
+   {% endfor %}
+</div>
+       
 
 </body>
 
