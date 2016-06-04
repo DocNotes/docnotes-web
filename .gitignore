@@ -1,5 +1,5 @@
 
 .DS_Store
 
-temp
-node_modules/*
+ahkl/docnotes/temp
+ahkl/docnotes/node_modules/*
