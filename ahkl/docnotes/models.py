@@ -20,25 +20,13 @@ class Patients(models.Model):
 
 
 class Prescription(models.Model):
-	ONE = '1 time a day'
-	TWO = '2 times a day'
-	THREE = '3 times a day'
-	FOUR = '4 times a day'
-	FIVE = '5 times a day'
-	SIX = '6 times a day'
-
-	TIME_INTERVALS = (
-	(ONE, '1 time a day'),
-	(TWO, '2 times a day'),
-	(THREE, '3 times a day'),
-	(FOUR, '4 times a day'),
-	(FIVE, '5 times a day'),
-	(SIX, '6 times a day'),
-)
+	CHOICES = [(i,i) for i in range(4)]
 
 	patient = models.ForeignKey(Patients, on_delete=models.CASCADE)
 	medication_type = models.CharField(max_length=255, default="Medication")
 	quantity = models.CharField(max_length=50, default="Quantity")
-	interval = models.CharField(max_length=20, choices=TIME_INTERVALS, default="Time")
 	duration = models.DateTimeField(default=datetime.now, blank = True)
+	time_interval = models.IntegerField(max_length=10, choices=CHOICES, default=1)
+
+
 
