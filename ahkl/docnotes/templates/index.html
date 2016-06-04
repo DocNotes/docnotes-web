@@ -18,7 +18,8 @@
         Name: {{ patient.name }}<br>
         UUID : {{ patient.id }}<br>
         Remarks : {{ patient.remark }}<br>
-        Date Admitted : {{ patient.date }}
+        Date Admitted : {{ patient.date }}<br>
+        Status : {{ patient.status }}
         </span>
     </div>
    {% endfor %}
@@ -29,9 +30,11 @@
     <div class="patient-info">
     <img src="{{ MEDIA_URL }}{{ patient.photo }}" />
         <span class="name">
-        Perfscription: {{ medication.medication_type }}<br>
-        Quantity: {{ medication.quantity }}<br>
-        Interval: {{ medication.interval }}
+        Prescription: {{ medication.medication_type }}<br>
+        Quantity : {{ medication.quantity }}<br>
+        Interval : {{ medication.interval }}<br>
+        Until : {{ medication.duration }}<br>
+        Schedule : {{ medication.schedule }}
         </span>
     </div>
    {% endfor %}

@@ -14,6 +14,7 @@ class Patients(models.Model):
     id = models.AutoField(primary_key=True)
     remark = models.CharField(max_length=255, default="Remark")
     date = models.DateTimeField(default=datetime.now, blank=True)
+    status = models.CharField(max_length=255, default="active")
 
 class Prescription(models.Model):
 	ONE = '1 time a day'
@@ -35,6 +36,7 @@ class Prescription(models.Model):
 	patient = models.ForeignKey(Patients, on_delete=models.CASCADE)
 	medication_type = models.CharField(max_length=255, default="Medication")
 	quantity = models.CharField(max_length=50, default="Quantity")
-	interval = models.CharField(max_length=5, choices=TIME_INTERVALS, default="Time")
-
+	interval = models.CharField(max_length=20, choices=TIME_INTERVALS, default="Time")
+	duration = models.DateTimeField(default=datetime.now, blank = True)
+	schedule = models.CharField(max_length=255, default="completed")
 
